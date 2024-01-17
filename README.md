@@ -29,28 +29,30 @@ Algorithms:
     
 4.Maximal flow algorithms:
 
-    4.1 Flow augmentation with edges shortest path with O(E*E*V) complexity.  
-    4.2 Flow augmentation with maximal capacity for sparse and dense graphs with O(E*E*ln(V)*ln(C) ) and O(V*V*E*ln(C) ) complexity.   
-     4.3 Dinic algoritm  with O(E*V*V) complexity. 
-      4.4 FIFO preflow-push algorithm with O(V*V*V) complexity.   
-      4.5 Highest label preflow-push algorithm with O(V*V*V) complexity.  
-      4.6 Relabel-to-front preflow-push algorithm with O(V*V*V) complexity.
+	4.1 Flow augmentation with edges shortest path with O(E*E*V) complexity.  
+	4.2 Flow augmentation with maximal capacity for sparse and dense graphs with O(E*E*ln(V)*ln(C) ) and O(V*V*E*ln(C) ) complexity.   
+	4.3 Dinic algoritm  with O(E*V*V) complexity. 
+	4.4 FIFO preflow-push algorithm with O(V*V*V) complexity.   
+	4.5 Highest label preflow-push algorithm with O(V*V*V) complexity.  
+	4.6 Relabel-to-front preflow-push algorithm with O(V*V*V) complexity.
    
 5.Minimal cost flow algorithms:
 
-   5.1 Succesive shortest path algorithm.
-   5.2 Cycle-canceling algorithm.	   
+	5.1 Succesive shortest path algorithm.
+	5.2 Cycle-canceling algorithm.	   
 
-6. Matching algorithms:
-  6.1 Maximal cardinality matching for arbitrary graph.
-  6.2 Matching with maximal weights for arbitrary graph.
-  6.3 Perfect matching with maximal weights for arbitrary graph.
-  6.4 Edge covering with minimal weights for bipartite graph.
-  6.5 Brutforce matching algorithms (for debug only).
+6.Matching algorithms:
+
+	6.1 Maximal cardinality matching for arbitrary graph.
+	6.2 Matching with maximal weights for arbitrary graph.
+	6.3 Perfect matching with maximal weights for arbitrary graph.
+	6.4 Edge covering with minimal weights for bipartite graph.
+	6.5 Brutforce matching algorithms (for debug only).
 
 Features:
 
-1. The implementation of most algorithms is independent of graph types or weight/distance/cost types. Any structure that has a suitable adjacency list interface can be used as a graph:
+1. The implementation of most algorithms is independent of graph types or weight/distance/cost types.
+Any structure that has a suitable adjacency list interface can be used as a graph:
 
 template<class graph_t>
 concept graph_cpt = requires(graph_t g,typename graph_t::node_handler_t n,
