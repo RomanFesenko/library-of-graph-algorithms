@@ -3,7 +3,8 @@ A library of the most widely used graph algorithms.
 Algorithms: 
 
 1.Linear-time algorithms:
-    1.1 Breadth first search.
+
+    1.1 Breadth first search.    
     1.2 Depth first search.
     1.3 Search cycles.
     1.4 Is graph bipartite.
@@ -14,26 +15,31 @@ Algorithms:
     1.9 Kosaraju algoritm for search strong connectivity components in digraph.	
 	
 2.Shortest paths algorithms:
-    2.1 Variants of Dijkstra algoritm for sparse and dense graphs with O(E*ln(V) ) and O(V*V) complexity.
+
+    2.1 Variants of Dijkstra algoritm for sparse and dense graphs 
+    	with O(E*ln(V) ) and O(V*V) complexity.
     2.2 Bellman-Ford algoritms for searching shortest paths or detection negative cycles.
     2.3 Floyd-Warshall algoritms for searching shortest paths or detection negative cycles.
     2.4 Generalized versions of the priority-search for the algorithms above. 
 
 3.Minimal spanning tree algorithms:
+
     3.1 Variants of Prim algoritm for sparse and dense graphs with O(E*ln(V) ) and O(V*V) complexity.
     3.2 Kruskal algorithm.
-
+    
 4.Maximal flow algorithms:
-   4.1 Flow augmentation with edges shortest path with O(E*E*V) complexity.
-   4.2 Flow augmentation with maximal capacity for sparse and dense graphs with O(E*E*ln(V)*ln(C) ) and O(V*V*E*ln(C) ) complexity.
-   4.3 Dinic algoritm  with O(E*V*V) complexity.
-   4.4 FIFO preflow-push algorithm with O(V*V*V) complexity.
-   4.5 Highest label preflow-push algorithm with O(V*V*V) complexity.
-   4.6 Relabel-to-front preflow-push algorithm with O(V*V*V) complexity.
 
-5. Minimal cost flow algorithms:
-  5.1 Succesive shortest path algorithm.
-  5.2 Cycle-canceling algorithm.	   
+    4.1 Flow augmentation with edges shortest path with O(E*E*V) complexity.  
+    4.2 Flow augmentation with maximal capacity for sparse and dense graphs with O(E*E*ln(V)*ln(C) ) and O(V*V*E*ln(C) ) complexity.   
+     4.3 Dinic algoritm  with O(E*V*V) complexity. 
+      4.4 FIFO preflow-push algorithm with O(V*V*V) complexity.   
+      4.5 Highest label preflow-push algorithm with O(V*V*V) complexity.  
+      4.6 Relabel-to-front preflow-push algorithm with O(V*V*V) complexity.
+   
+5.Minimal cost flow algorithms:
+
+   5.1 Succesive shortest path algorithm.
+   5.2 Cycle-canceling algorithm.	   
 
 6. Matching algorithms:
   6.1 Maximal cardinality matching for arbitrary graph.
