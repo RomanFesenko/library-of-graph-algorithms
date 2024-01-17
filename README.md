@@ -1,3 +1,5 @@
+24/17/01
+
 A library of the most widely used graph algorithms.
 
 Algorithms: 
@@ -53,7 +55,7 @@ Features:
 
 1. The implementation of most algorithms is independent of graph types or weight/distance/cost types.
 Any structure that has a suitable adjacency list interface can be used as a graph:
-
+```C++
 template<class graph_t>
 concept graph_cpt = requires(graph_t g,typename graph_t::node_handler_t n,
                                        typename graph_t::edge_handler_t e)
@@ -88,9 +90,10 @@ concept graph_cpt = requires(graph_t g,typename graph_t::node_handler_t n,
     // of node.
     {g.index(n)}->std::convertible_to<std::size_t>;
 };
+```
 
 2.Breadth-search, depth-search, and priority search algorithms (e.g., Dijkstra's algorithm or Prim's algorithm) can be extended with "search adapters" that allow to perform some actions at key points in the algorithms:
-
+```C++
 template<class search_adapter_t,class node_t,class edge_t>
 concept depth_search_adapter_cpt = requires(search_adapter_t sad,node_t n,edge_t e)
 {
@@ -112,10 +115,10 @@ concept depth_search_adapter_cpt = requires(search_adapter_t sad,node_t n,edge_t
     // if return false, algorithm preterm terminate;
     {sad.node_postprocess(n)}->std::same_as<bool>;
 };
-
+```
 3. Shortest path algorithms can be extended by using "weight updaters" 
 that allow to search for a "generalized shortest path":
-
+```C++
 template<class upd_t,class weight_t>
 concept weight_updater_cpt= requires(upd_t upd,weight_t w)
 {
@@ -137,3 +140,4 @@ concept weight_updater_cpt= requires(upd_t upd,weight_t w)
     // upd_t::init_weight - initial weight of start node.
     {upd.init_weight()}->std::same_as<weight_t>;
 };
+```
