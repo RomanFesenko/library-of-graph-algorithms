@@ -22,7 +22,8 @@ Algorithms:
     	with O(E*ln(V) ) and O(V*V) complexity.
     2.2 Bellman-Ford algoritms for searching shortest paths or detection negative cycles.
     2.3 Floyd-Warshall algoritms for searching shortest paths or detection negative cycles.
-    2.4 Generalized versions of the priority-search for the algorithms above. 
+    2.4 A* algorithm.
+    2.5 Generalized versions of the priority-search for the algorithms above. 
 
 3.Minimal spanning tree algorithms:
 
@@ -85,10 +86,6 @@ concept graph_cpt = requires(graph_t g,typename graph_t::node_handler_t n,
     // graph_t::target(node_handler_t n,edge_handler_t edge) -
     // return adjacent node with n by edge.
     {g.target(n,e)}->std::same_as<typename graph_t::node_handler_t>;
-
-    // graph_t::index(node_handler_t) -return unique integer identifier
-    // of node.
-    {g.index(n)}->std::convertible_to<std::size_t>;
 };
 ```
 
